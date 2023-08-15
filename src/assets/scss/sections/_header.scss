@@ -23,8 +23,37 @@
 
     }
 
+    &_dropdown{
+        display: none;
+        position: absolute;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+
+        &_close{
+            background-color: transparent;
+            border: none;
+            margin-bottom: 50px;
+        }
+
+
+        &.open{
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 370px;
+            height: 100vh;
+            background-color: #f7734b;
+            padding: 50px;
+            position: absolute;
+            z-index: 10;
+        }
+
+    }
+
     &_burger{
         display: none;
+        background-color: transparent;
+        border: none;
 
 
         @include media(800){
@@ -39,6 +68,12 @@
 
         @include media(1000){
             gap: 30px;
+        }
+
+        &_dropdown{
+            flex-direction: column;
+            gap: 30px
+
         }
 
     
@@ -97,6 +132,22 @@
 
         &:hover{
             color: #FF6838;
+        }
+
+
+        &_dropdown{
+            color: #FFF;
+            padding-bottom: 10px;
+            transition: all 0.2s ease-in-out;
+
+
+
+            &:hover{
+                width: 90px;
+                color: #fff;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #FFF;
+            }
         }
     }
 

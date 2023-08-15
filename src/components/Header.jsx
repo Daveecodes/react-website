@@ -1,6 +1,22 @@
 import React from 'react'
+import {useState } from 'react'
+
 
 function Header() {
+
+    const [open, setOpen] = useState(false)
+
+
+    
+    function openMenu(){
+        setOpen(true)
+    }
+
+    function closeMenu(){
+        setOpen(false)
+    }
+
+
   return (
     <header className="header">
         <div className="container">
@@ -45,11 +61,30 @@ function Header() {
                         <p className="header_button_text">Sign Up</p>
                     </button>
                 </div>
-                <div className="header_burger">
+                <button className="header_burger" onClick={() => openMenu()}>
 <svg width="30px" height="30px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
   <path fill="#000000" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
 </svg>
-                </div>
+                </button>
+            </div>
+        </div>
+        <div  className={open ? 'header_dropdown open' : 'header_dropdown'}>
+            <button className="header_dropdown_close" onClick={() => closeMenu()}>
+<svg fill="#fff" height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 460.775 460.775" xml:space="preserve">
+<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
+</svg>
+            </button>
+            <div className="header_navbar header_navbar_dropdown">
+                <a href="#" className="header_link header_link_dropdown">Home</a>
+                <a href="#" className="header_link header_link_dropdown">Service</a>
+                <a href="#" className="header_link header_link_dropdown">Top cities</a>
+                <a href="#" className="header_link header_link_dropdown">Contract</a>
             </div>
         </div>
     </header>
