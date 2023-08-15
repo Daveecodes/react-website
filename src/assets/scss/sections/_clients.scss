@@ -1,0 +1,81 @@
+.clients{
+    position: relative;
+    margin-top: 166px;
+
+
+    &_row{
+        @include flex(center, space-between);
+
+
+        @include media(1000){
+            flex-direction: column;
+            @include flex(center, center);
+
+        }
+
+    }
+
+    &_text{
+        color: var(--primary, #363853);
+        font-family: Rubik;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px; /* 225% */
+        letter-spacing: 0.5px;
+    }
+
+    &_name{
+        color: var(--secondary, #FF7A50);
+        font-family: Rubik;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &_desc{
+        color: #AAA;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_more{
+        margin-top: 74px;
+        @include flex(center,space-between);
+
+
+        @include media(1000){
+            @include flex(center, space-between);
+        }
+    }
+
+    &_content{
+
+        @include media(1000){
+            flex-direction: column;
+            @include flex(center, center);
+            text-align: center;
+
+        }
+    }
+
+    &_txt{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &_buttons{
+        @include flex(Center,center);
+        gap: 44px;
+    }
+
+    &_title{
+        text-align: center;
+        margin-bottom: 67px;
+    }
+}

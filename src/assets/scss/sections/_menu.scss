@@ -1,0 +1,116 @@
+.menu{
+    position: relative;
+    margin-top: 200px;
+
+
+
+    &_title{
+        color: var(--primary, #363853);
+        font-family: Rubik;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 55px
+    }
+
+
+    &_panels{
+        display: flex;
+        flex-direction: column;
+        gap: 39px;
+    }
+
+    &_items{
+        @include flex(center,center);
+        gap: 26px;
+        flex-wrap: wrap;
+    }
+
+
+    &_panel{
+        @include flex(center,center);
+        gap: 8px;
+        color: #FFF;
+        width: 210px;
+        height: 70px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--secondary, #FF7A50);
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+
+
+        &_text{
+            font-family: Rubik;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &_sections{
+        @include flex(center,center);
+        gap: 26px;
+        flex-wrap: wrap;
+    }
+
+    &_item{
+        @include flex(center,center);
+        flex-direction: column;
+        width: 208px;
+        height: 279px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: rgb(255, 255, 255);
+    }
+
+
+
+    &_name{
+        color: var(--primary, #363853);
+        font-family: Rubik;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 9px;
+
+    }
+
+    &_price{
+        color: var(--primary, #363853);
+        font-family: Rubik;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 11px;
+
+    }
+
+
+    &_button{
+        @include flex(center,center);
+        width: 106px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 2px;
+        background: var(--secondary, #FF7A50);
+        border: none;
+
+
+        &_text{
+            color: #FFF;
+            font-family: Rubik;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+
+}

@@ -1,0 +1,134 @@
+.deliver{
+    position: relative;
+    margin-top: 275px;
+
+
+    &_row{
+        @include flex(center,space-between);
+
+
+
+        @include media(1030){
+            flex-direction: column;
+            @include flex(center,center);
+
+        }
+
+    }
+
+    &_image{
+        width: 60%;
+
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_title{
+        color: var(--primary, #363853);
+        font-family: Rubik;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 50px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+
+    &_sub{
+        color: #363853;
+        font-family: Rubik;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+        margin-bottom: 44px;
+        width: 90%
+
+    }
+
+    &_stats{
+        @include flex(start,start);
+        flex-direction: column;
+        gap: 25px;
+
+
+        @include media(1030){
+            @include flex(center,center);
+            flex-direction: row;
+            
+
+        }
+
+        @include media(730){
+            flex-direction: column;
+            
+
+        }
+    }
+
+    &_stat{
+        @include flex(center,center);
+        gap: 32px;
+
+
+
+        @include media(1030){
+            @include flex(center,center);
+            flex-direction: column;
+            gap: 2px;
+            
+
+        }
+
+
+    }
+
+    &_text{
+        color: #363853;
+        font-family: Rubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: capitalize;
+    }
+
+    &_button{
+        @include flex(center,center);
+        width: 176px;
+        height: 58px;
+        flex-shrink: 0;
+        border-radius: 30px 30px 1px 30px;
+        background: var(--secondary, #FF7A50);
+        box-shadow: 0px 22px 40px 0px rgba(255, 104, 56, 0.19);
+        border: none;
+        margin-top: 52px;
+
+
+        &_text{
+            color: #FFF;
+            font-family: Rubik;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+        }
+    }
+
+    &_content{
+        width: 40%;
+
+
+        @include media(1030){
+            @include flex(center,center);
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+
+        }
+
+    }
+}

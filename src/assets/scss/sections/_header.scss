@@ -1,0 +1,125 @@
+.header{
+    position: relative;
+
+    &_row{
+        padding-top: 50px;
+        @include flex(center,space-between);
+
+    }
+
+    &_content{
+        @include flex(center,center);
+        gap: 57px;
+
+
+        @include media(1000){
+            gap: 20px;
+        }
+
+        @include media(800){
+            display: none;
+        }
+
+
+    }
+
+    &_burger{
+        display: none;
+
+
+        @include media(800){
+            display: block;
+        }
+    }
+
+    &_navbar{
+        display: flex;
+        gap: 60px;
+
+
+        @include media(1000){
+            gap: 30px;
+        }
+
+    
+    }
+
+
+    &_contact{
+        @include flex(start,start);
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &_number{
+        @include flex(center,center);
+        gap: 10px;
+
+        &_text{
+            color: #202020;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+    }
+
+    &_icons{
+        @include flex(center,center);
+        gap: 62px;
+
+
+        @include media(1000){
+            gap: 30px;
+        }
+    }
+
+    &_time{
+        color: #7D808A;
+        font-family: Roboto;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_link{
+        color: #363853;
+        font-family: Rubik;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: all 0.2s ease-in-out;
+
+
+        &:hover{
+            color: #FF6838;
+        }
+    }
+
+
+
+
+    &_button{
+        padding: 14px 27px 14px 28px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: var(--secondary, #FF7A50);
+        box-shadow: 0px 22px 40px 0px rgba(255, 104, 56, 0.19);
+        border: none;
+
+
+        &_text{
+            color: var(--main-back-white, #FFF);
+            text-align: center;
+            font-family: Rubik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

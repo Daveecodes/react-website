@@ -1,0 +1,122 @@
+.register{
+    position: relative;
+    margin-top: 125px;
+
+
+    &_row{
+        width: 100%;
+        height: 312px;
+        border-radius: 40px;
+        background-color: #f4734c;
+        @include flex(center,center);
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    &_input{
+        width: 838.5px;
+        height: 78px;
+        flex-shrink: 0;
+        border-radius: 70px;
+        background: #FFF;
+        box-shadow: 10px 24px 54px 0px rgba(0, 0, 0, 0.07);
+        border: none;
+        padding: 30px;
+        font-family: Rubik;
+        font-size: 20px;
+
+        @include media(920){
+            width: 700px;
+        }
+
+        @include media(720){
+            width: 540px;
+            height: 60px;
+        }
+
+
+        @include media(600){
+            width: 400px;
+        }
+
+        
+
+       &::placeholder{
+        color: var(--primary, #363853);
+        text-align: center;
+        font-family: Rubik;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+       }
+    }
+
+    &_label{
+        position: absolute;
+        bottom: 23%;
+        right: 31.6%;
+        width: 191.1px;
+        height: 58.5px;
+        flex-shrink: 0;
+        border-radius: 70px;
+        background: var(--secondary, #FF7A50);
+        @include flex(center,center);
+        gap: 8px;
+
+        @include media(1000){
+            right: 7.6%;
+
+        }
+
+        @include media(920){
+            right:2%;
+        }
+
+        @include media(920){
+            height: 45px;
+            bottom: 2%;
+            right: 10%;
+            
+
+        }
+    }
+
+    &_txt{
+        color: #FFF;
+        text-align: center;
+        font-family: Rubik;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
+    &_text{
+        @include flex(center,center);
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &_title{
+        color: #FFF;
+        text-align: center;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptive-value('font-size', 40, 24);
+    }
+
+    &_sub{
+        color: #FFF;
+        text-align: center;
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+        @include adaptive-value('font-size', 16, 13);
+
+    }
+}
